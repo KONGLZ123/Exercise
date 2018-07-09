@@ -1,0 +1,2 @@
+/usr/bin/ar qc libmedian_proto.a  CMakeFiles/median_proto.dir/median.pb.cc.o
+/usr/bin/ranlib libmedian_proto.a

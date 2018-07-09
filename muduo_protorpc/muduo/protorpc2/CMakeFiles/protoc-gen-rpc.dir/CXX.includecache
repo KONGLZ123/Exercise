@@ -1,0 +1,44 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/kong/exercise/muduo/protorpc2/cpp_service.cc
+muduo/protorpc2/cpp_service.h
+-
+google/protobuf/io/printer.h
+-
+
+/home/kong/exercise/muduo/protorpc2/gen.cc
+memory
+-
+string
+-
+google/protobuf/descriptor.h
+-
+google/protobuf/compiler/code_generator.h
+-
+google/protobuf/compiler/plugin.h
+-
+google/protobuf/io/printer.h
+-
+google/protobuf/io/zero_copy_stream.h
+-
+muduo/protorpc2/cpp_service.h
+-
+stdio.h
+-
+
+muduo/protorpc2/cpp_service.h
+map
+-
+string
+-
+google/protobuf/stubs/common.h
+-
+google/protobuf/descriptor.h
+-
+
