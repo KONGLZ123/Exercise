@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/kong/exercise
+CMAKE_SOURCE_DIR = /home/kong/exercise/muduo_protorpc
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/kong/exercise
+CMAKE_BINARY_DIR = /home/kong/exercise/muduo_protorpc
 
 # Include any dependencies generated for this target.
 include muduo/protorpc2/CMakeFiles/protoc-gen-rpc.dir/depend.make
@@ -59,16 +59,16 @@ include muduo/protorpc2/CMakeFiles/protoc-gen-rpc.dir/flags.make
 
 muduo/protorpc2/CMakeFiles/protoc-gen-rpc.dir/gen.cc.o: muduo/protorpc2/CMakeFiles/protoc-gen-rpc.dir/flags.make
 muduo/protorpc2/CMakeFiles/protoc-gen-rpc.dir/gen.cc.o: muduo/protorpc2/gen.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kong/exercise/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object muduo/protorpc2/CMakeFiles/protoc-gen-rpc.dir/gen.cc.o"
-	cd /home/kong/exercise/muduo/protorpc2 && g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/protoc-gen-rpc.dir/gen.cc.o -c /home/kong/exercise/muduo/protorpc2/gen.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kong/exercise/muduo_protorpc/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object muduo/protorpc2/CMakeFiles/protoc-gen-rpc.dir/gen.cc.o"
+	cd /home/kong/exercise/muduo_protorpc/muduo/protorpc2 && g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/protoc-gen-rpc.dir/gen.cc.o -c /home/kong/exercise/muduo_protorpc/muduo/protorpc2/gen.cc
 
 muduo/protorpc2/CMakeFiles/protoc-gen-rpc.dir/gen.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/protoc-gen-rpc.dir/gen.cc.i"
-	cd /home/kong/exercise/muduo/protorpc2 && g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kong/exercise/muduo/protorpc2/gen.cc > CMakeFiles/protoc-gen-rpc.dir/gen.cc.i
+	cd /home/kong/exercise/muduo_protorpc/muduo/protorpc2 && g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kong/exercise/muduo_protorpc/muduo/protorpc2/gen.cc > CMakeFiles/protoc-gen-rpc.dir/gen.cc.i
 
 muduo/protorpc2/CMakeFiles/protoc-gen-rpc.dir/gen.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/protoc-gen-rpc.dir/gen.cc.s"
-	cd /home/kong/exercise/muduo/protorpc2 && g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kong/exercise/muduo/protorpc2/gen.cc -o CMakeFiles/protoc-gen-rpc.dir/gen.cc.s
+	cd /home/kong/exercise/muduo_protorpc/muduo/protorpc2 && g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kong/exercise/muduo_protorpc/muduo/protorpc2/gen.cc -o CMakeFiles/protoc-gen-rpc.dir/gen.cc.s
 
 muduo/protorpc2/CMakeFiles/protoc-gen-rpc.dir/gen.cc.o.requires:
 
@@ -83,16 +83,16 @@ muduo/protorpc2/CMakeFiles/protoc-gen-rpc.dir/gen.cc.o.provides.build: muduo/pro
 
 muduo/protorpc2/CMakeFiles/protoc-gen-rpc.dir/cpp_service.cc.o: muduo/protorpc2/CMakeFiles/protoc-gen-rpc.dir/flags.make
 muduo/protorpc2/CMakeFiles/protoc-gen-rpc.dir/cpp_service.cc.o: muduo/protorpc2/cpp_service.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kong/exercise/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object muduo/protorpc2/CMakeFiles/protoc-gen-rpc.dir/cpp_service.cc.o"
-	cd /home/kong/exercise/muduo/protorpc2 && g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/protoc-gen-rpc.dir/cpp_service.cc.o -c /home/kong/exercise/muduo/protorpc2/cpp_service.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kong/exercise/muduo_protorpc/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object muduo/protorpc2/CMakeFiles/protoc-gen-rpc.dir/cpp_service.cc.o"
+	cd /home/kong/exercise/muduo_protorpc/muduo/protorpc2 && g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/protoc-gen-rpc.dir/cpp_service.cc.o -c /home/kong/exercise/muduo_protorpc/muduo/protorpc2/cpp_service.cc
 
 muduo/protorpc2/CMakeFiles/protoc-gen-rpc.dir/cpp_service.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/protoc-gen-rpc.dir/cpp_service.cc.i"
-	cd /home/kong/exercise/muduo/protorpc2 && g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kong/exercise/muduo/protorpc2/cpp_service.cc > CMakeFiles/protoc-gen-rpc.dir/cpp_service.cc.i
+	cd /home/kong/exercise/muduo_protorpc/muduo/protorpc2 && g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kong/exercise/muduo_protorpc/muduo/protorpc2/cpp_service.cc > CMakeFiles/protoc-gen-rpc.dir/cpp_service.cc.i
 
 muduo/protorpc2/CMakeFiles/protoc-gen-rpc.dir/cpp_service.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/protoc-gen-rpc.dir/cpp_service.cc.s"
-	cd /home/kong/exercise/muduo/protorpc2 && g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kong/exercise/muduo/protorpc2/cpp_service.cc -o CMakeFiles/protoc-gen-rpc.dir/cpp_service.cc.s
+	cd /home/kong/exercise/muduo_protorpc/muduo/protorpc2 && g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kong/exercise/muduo_protorpc/muduo/protorpc2/cpp_service.cc -o CMakeFiles/protoc-gen-rpc.dir/cpp_service.cc.s
 
 muduo/protorpc2/CMakeFiles/protoc-gen-rpc.dir/cpp_service.cc.o.requires:
 
@@ -117,10 +117,10 @@ bin/protoc-gen-rpc: muduo/protorpc2/CMakeFiles/protoc-gen-rpc.dir/gen.cc.o
 bin/protoc-gen-rpc: muduo/protorpc2/CMakeFiles/protoc-gen-rpc.dir/cpp_service.cc.o
 bin/protoc-gen-rpc: muduo/protorpc2/CMakeFiles/protoc-gen-rpc.dir/build.make
 bin/protoc-gen-rpc: muduo/protorpc2/CMakeFiles/protoc-gen-rpc.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/kong/exercise/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable ../../bin/protoc-gen-rpc"
-	cd /home/kong/exercise/muduo/protorpc2 && cp /home/kong/project/build/release-install-cpp11/include/muduo/net/protorpc/rpcservice.proto rpcservice.proto
-	cd /home/kong/exercise/muduo/protorpc2 && sed -i "/option cc_generic_services/d" rpcservice.proto
-	cd /home/kong/exercise/muduo/protorpc2 && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/protoc-gen-rpc.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/kong/exercise/muduo_protorpc/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable ../../bin/protoc-gen-rpc"
+	cd /home/kong/exercise/muduo_protorpc/muduo/protorpc2 && cp /home/kong/project/build/release-install-cpp11/include/muduo/net/protorpc/rpcservice.proto rpcservice.proto
+	cd /home/kong/exercise/muduo_protorpc/muduo/protorpc2 && sed -i "/option cc_generic_services/d" rpcservice.proto
+	cd /home/kong/exercise/muduo_protorpc/muduo/protorpc2 && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/protoc-gen-rpc.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 muduo/protorpc2/CMakeFiles/protoc-gen-rpc.dir/build: bin/protoc-gen-rpc
@@ -133,10 +133,10 @@ muduo/protorpc2/CMakeFiles/protoc-gen-rpc.dir/requires: muduo/protorpc2/CMakeFil
 .PHONY : muduo/protorpc2/CMakeFiles/protoc-gen-rpc.dir/requires
 
 muduo/protorpc2/CMakeFiles/protoc-gen-rpc.dir/clean:
-	cd /home/kong/exercise/muduo/protorpc2 && $(CMAKE_COMMAND) -P CMakeFiles/protoc-gen-rpc.dir/cmake_clean.cmake
+	cd /home/kong/exercise/muduo_protorpc/muduo/protorpc2 && $(CMAKE_COMMAND) -P CMakeFiles/protoc-gen-rpc.dir/cmake_clean.cmake
 .PHONY : muduo/protorpc2/CMakeFiles/protoc-gen-rpc.dir/clean
 
 muduo/protorpc2/CMakeFiles/protoc-gen-rpc.dir/depend:
-	cd /home/kong/exercise && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/kong/exercise /home/kong/exercise/muduo/protorpc2 /home/kong/exercise /home/kong/exercise/muduo/protorpc2 /home/kong/exercise/muduo/protorpc2/CMakeFiles/protoc-gen-rpc.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/kong/exercise/muduo_protorpc && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/kong/exercise/muduo_protorpc /home/kong/exercise/muduo_protorpc/muduo/protorpc2 /home/kong/exercise/muduo_protorpc /home/kong/exercise/muduo_protorpc/muduo/protorpc2 /home/kong/exercise/muduo_protorpc/muduo/protorpc2/CMakeFiles/protoc-gen-rpc.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : muduo/protorpc2/CMakeFiles/protoc-gen-rpc.dir/depend
 

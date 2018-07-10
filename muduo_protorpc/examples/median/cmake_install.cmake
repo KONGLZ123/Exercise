@@ -1,4 +1,4 @@
-# Install script for directory: /home/kong/exercise/examples/median
+# Install script for directory: /home/kong/exercise/muduo_protorpc/examples/median
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

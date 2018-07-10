@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/kong/exercise
+CMAKE_SOURCE_DIR = /home/kong/exercise/muduo_protorpc
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/kong/exercise
+CMAKE_BINARY_DIR = /home/kong/exercise/muduo_protorpc
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -124,14 +124,14 @@ install/local/fast: install/local
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/kong/exercise && $(CMAKE_COMMAND) -E cmake_progress_start /home/kong/exercise/CMakeFiles /home/kong/exercise/muduo/protorpc2/CMakeFiles/progress.marks
-	cd /home/kong/exercise && $(MAKE) -f CMakeFiles/Makefile2 muduo/protorpc2/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kong/exercise/CMakeFiles 0
+	cd /home/kong/exercise/muduo_protorpc && $(CMAKE_COMMAND) -E cmake_progress_start /home/kong/exercise/muduo_protorpc/CMakeFiles /home/kong/exercise/muduo_protorpc/muduo/protorpc2/CMakeFiles/progress.marks
+	cd /home/kong/exercise/muduo_protorpc && $(MAKE) -f CMakeFiles/Makefile2 muduo/protorpc2/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kong/exercise/muduo_protorpc/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/kong/exercise && $(MAKE) -f CMakeFiles/Makefile2 muduo/protorpc2/clean
+	cd /home/kong/exercise/muduo_protorpc && $(MAKE) -f CMakeFiles/Makefile2 muduo/protorpc2/clean
 .PHONY : clean
 
 # The main clean target
@@ -141,22 +141,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/kong/exercise && $(MAKE) -f CMakeFiles/Makefile2 muduo/protorpc2/preinstall
+	cd /home/kong/exercise/muduo_protorpc && $(MAKE) -f CMakeFiles/Makefile2 muduo/protorpc2/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/kong/exercise && $(MAKE) -f CMakeFiles/Makefile2 muduo/protorpc2/preinstall
+	cd /home/kong/exercise/muduo_protorpc && $(MAKE) -f CMakeFiles/Makefile2 muduo/protorpc2/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/kong/exercise && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/kong/exercise/muduo_protorpc && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 muduo/protorpc2/CMakeFiles/protoc-gen-rpc.dir/rule:
-	cd /home/kong/exercise && $(MAKE) -f CMakeFiles/Makefile2 muduo/protorpc2/CMakeFiles/protoc-gen-rpc.dir/rule
+	cd /home/kong/exercise/muduo_protorpc && $(MAKE) -f CMakeFiles/Makefile2 muduo/protorpc2/CMakeFiles/protoc-gen-rpc.dir/rule
 .PHONY : muduo/protorpc2/CMakeFiles/protoc-gen-rpc.dir/rule
 
 # Convenience name for target.
@@ -166,12 +166,12 @@ protoc-gen-rpc: muduo/protorpc2/CMakeFiles/protoc-gen-rpc.dir/rule
 
 # fast build rule for target.
 protoc-gen-rpc/fast:
-	cd /home/kong/exercise && $(MAKE) -f muduo/protorpc2/CMakeFiles/protoc-gen-rpc.dir/build.make muduo/protorpc2/CMakeFiles/protoc-gen-rpc.dir/build
+	cd /home/kong/exercise/muduo_protorpc && $(MAKE) -f muduo/protorpc2/CMakeFiles/protoc-gen-rpc.dir/build.make muduo/protorpc2/CMakeFiles/protoc-gen-rpc.dir/build
 .PHONY : protoc-gen-rpc/fast
 
 # Convenience name for target.
 muduo/protorpc2/CMakeFiles/muduo_protorpc2.dir/rule:
-	cd /home/kong/exercise && $(MAKE) -f CMakeFiles/Makefile2 muduo/protorpc2/CMakeFiles/muduo_protorpc2.dir/rule
+	cd /home/kong/exercise/muduo_protorpc && $(MAKE) -f CMakeFiles/Makefile2 muduo/protorpc2/CMakeFiles/muduo_protorpc2.dir/rule
 .PHONY : muduo/protorpc2/CMakeFiles/muduo_protorpc2.dir/rule
 
 # Convenience name for target.
@@ -181,7 +181,7 @@ muduo_protorpc2: muduo/protorpc2/CMakeFiles/muduo_protorpc2.dir/rule
 
 # fast build rule for target.
 muduo_protorpc2/fast:
-	cd /home/kong/exercise && $(MAKE) -f muduo/protorpc2/CMakeFiles/muduo_protorpc2.dir/build.make muduo/protorpc2/CMakeFiles/muduo_protorpc2.dir/build
+	cd /home/kong/exercise/muduo_protorpc && $(MAKE) -f muduo/protorpc2/CMakeFiles/muduo_protorpc2.dir/build.make muduo/protorpc2/CMakeFiles/muduo_protorpc2.dir/build
 .PHONY : muduo_protorpc2/fast
 
 RpcChannel.o: RpcChannel.cc.o
@@ -190,7 +190,7 @@ RpcChannel.o: RpcChannel.cc.o
 
 # target to build an object file
 RpcChannel.cc.o:
-	cd /home/kong/exercise && $(MAKE) -f muduo/protorpc2/CMakeFiles/muduo_protorpc2.dir/build.make muduo/protorpc2/CMakeFiles/muduo_protorpc2.dir/RpcChannel.cc.o
+	cd /home/kong/exercise/muduo_protorpc && $(MAKE) -f muduo/protorpc2/CMakeFiles/muduo_protorpc2.dir/build.make muduo/protorpc2/CMakeFiles/muduo_protorpc2.dir/RpcChannel.cc.o
 .PHONY : RpcChannel.cc.o
 
 RpcChannel.i: RpcChannel.cc.i
@@ -199,7 +199,7 @@ RpcChannel.i: RpcChannel.cc.i
 
 # target to preprocess a source file
 RpcChannel.cc.i:
-	cd /home/kong/exercise && $(MAKE) -f muduo/protorpc2/CMakeFiles/muduo_protorpc2.dir/build.make muduo/protorpc2/CMakeFiles/muduo_protorpc2.dir/RpcChannel.cc.i
+	cd /home/kong/exercise/muduo_protorpc && $(MAKE) -f muduo/protorpc2/CMakeFiles/muduo_protorpc2.dir/build.make muduo/protorpc2/CMakeFiles/muduo_protorpc2.dir/RpcChannel.cc.i
 .PHONY : RpcChannel.cc.i
 
 RpcChannel.s: RpcChannel.cc.s
@@ -208,7 +208,7 @@ RpcChannel.s: RpcChannel.cc.s
 
 # target to generate assembly for a file
 RpcChannel.cc.s:
-	cd /home/kong/exercise && $(MAKE) -f muduo/protorpc2/CMakeFiles/muduo_protorpc2.dir/build.make muduo/protorpc2/CMakeFiles/muduo_protorpc2.dir/RpcChannel.cc.s
+	cd /home/kong/exercise/muduo_protorpc && $(MAKE) -f muduo/protorpc2/CMakeFiles/muduo_protorpc2.dir/build.make muduo/protorpc2/CMakeFiles/muduo_protorpc2.dir/RpcChannel.cc.s
 .PHONY : RpcChannel.cc.s
 
 RpcServer.o: RpcServer.cc.o
@@ -217,7 +217,7 @@ RpcServer.o: RpcServer.cc.o
 
 # target to build an object file
 RpcServer.cc.o:
-	cd /home/kong/exercise && $(MAKE) -f muduo/protorpc2/CMakeFiles/muduo_protorpc2.dir/build.make muduo/protorpc2/CMakeFiles/muduo_protorpc2.dir/RpcServer.cc.o
+	cd /home/kong/exercise/muduo_protorpc && $(MAKE) -f muduo/protorpc2/CMakeFiles/muduo_protorpc2.dir/build.make muduo/protorpc2/CMakeFiles/muduo_protorpc2.dir/RpcServer.cc.o
 .PHONY : RpcServer.cc.o
 
 RpcServer.i: RpcServer.cc.i
@@ -226,7 +226,7 @@ RpcServer.i: RpcServer.cc.i
 
 # target to preprocess a source file
 RpcServer.cc.i:
-	cd /home/kong/exercise && $(MAKE) -f muduo/protorpc2/CMakeFiles/muduo_protorpc2.dir/build.make muduo/protorpc2/CMakeFiles/muduo_protorpc2.dir/RpcServer.cc.i
+	cd /home/kong/exercise/muduo_protorpc && $(MAKE) -f muduo/protorpc2/CMakeFiles/muduo_protorpc2.dir/build.make muduo/protorpc2/CMakeFiles/muduo_protorpc2.dir/RpcServer.cc.i
 .PHONY : RpcServer.cc.i
 
 RpcServer.s: RpcServer.cc.s
@@ -235,7 +235,7 @@ RpcServer.s: RpcServer.cc.s
 
 # target to generate assembly for a file
 RpcServer.cc.s:
-	cd /home/kong/exercise && $(MAKE) -f muduo/protorpc2/CMakeFiles/muduo_protorpc2.dir/build.make muduo/protorpc2/CMakeFiles/muduo_protorpc2.dir/RpcServer.cc.s
+	cd /home/kong/exercise/muduo_protorpc && $(MAKE) -f muduo/protorpc2/CMakeFiles/muduo_protorpc2.dir/build.make muduo/protorpc2/CMakeFiles/muduo_protorpc2.dir/RpcServer.cc.s
 .PHONY : RpcServer.cc.s
 
 RpcService.o: RpcService.cc.o
@@ -244,7 +244,7 @@ RpcService.o: RpcService.cc.o
 
 # target to build an object file
 RpcService.cc.o:
-	cd /home/kong/exercise && $(MAKE) -f muduo/protorpc2/CMakeFiles/muduo_protorpc2.dir/build.make muduo/protorpc2/CMakeFiles/muduo_protorpc2.dir/RpcService.cc.o
+	cd /home/kong/exercise/muduo_protorpc && $(MAKE) -f muduo/protorpc2/CMakeFiles/muduo_protorpc2.dir/build.make muduo/protorpc2/CMakeFiles/muduo_protorpc2.dir/RpcService.cc.o
 .PHONY : RpcService.cc.o
 
 RpcService.i: RpcService.cc.i
@@ -253,7 +253,7 @@ RpcService.i: RpcService.cc.i
 
 # target to preprocess a source file
 RpcService.cc.i:
-	cd /home/kong/exercise && $(MAKE) -f muduo/protorpc2/CMakeFiles/muduo_protorpc2.dir/build.make muduo/protorpc2/CMakeFiles/muduo_protorpc2.dir/RpcService.cc.i
+	cd /home/kong/exercise/muduo_protorpc && $(MAKE) -f muduo/protorpc2/CMakeFiles/muduo_protorpc2.dir/build.make muduo/protorpc2/CMakeFiles/muduo_protorpc2.dir/RpcService.cc.i
 .PHONY : RpcService.cc.i
 
 RpcService.s: RpcService.cc.s
@@ -262,7 +262,7 @@ RpcService.s: RpcService.cc.s
 
 # target to generate assembly for a file
 RpcService.cc.s:
-	cd /home/kong/exercise && $(MAKE) -f muduo/protorpc2/CMakeFiles/muduo_protorpc2.dir/build.make muduo/protorpc2/CMakeFiles/muduo_protorpc2.dir/RpcService.cc.s
+	cd /home/kong/exercise/muduo_protorpc && $(MAKE) -f muduo/protorpc2/CMakeFiles/muduo_protorpc2.dir/build.make muduo/protorpc2/CMakeFiles/muduo_protorpc2.dir/RpcService.cc.s
 .PHONY : RpcService.cc.s
 
 cpp_service.o: cpp_service.cc.o
@@ -271,7 +271,7 @@ cpp_service.o: cpp_service.cc.o
 
 # target to build an object file
 cpp_service.cc.o:
-	cd /home/kong/exercise && $(MAKE) -f muduo/protorpc2/CMakeFiles/protoc-gen-rpc.dir/build.make muduo/protorpc2/CMakeFiles/protoc-gen-rpc.dir/cpp_service.cc.o
+	cd /home/kong/exercise/muduo_protorpc && $(MAKE) -f muduo/protorpc2/CMakeFiles/protoc-gen-rpc.dir/build.make muduo/protorpc2/CMakeFiles/protoc-gen-rpc.dir/cpp_service.cc.o
 .PHONY : cpp_service.cc.o
 
 cpp_service.i: cpp_service.cc.i
@@ -280,7 +280,7 @@ cpp_service.i: cpp_service.cc.i
 
 # target to preprocess a source file
 cpp_service.cc.i:
-	cd /home/kong/exercise && $(MAKE) -f muduo/protorpc2/CMakeFiles/protoc-gen-rpc.dir/build.make muduo/protorpc2/CMakeFiles/protoc-gen-rpc.dir/cpp_service.cc.i
+	cd /home/kong/exercise/muduo_protorpc && $(MAKE) -f muduo/protorpc2/CMakeFiles/protoc-gen-rpc.dir/build.make muduo/protorpc2/CMakeFiles/protoc-gen-rpc.dir/cpp_service.cc.i
 .PHONY : cpp_service.cc.i
 
 cpp_service.s: cpp_service.cc.s
@@ -289,7 +289,7 @@ cpp_service.s: cpp_service.cc.s
 
 # target to generate assembly for a file
 cpp_service.cc.s:
-	cd /home/kong/exercise && $(MAKE) -f muduo/protorpc2/CMakeFiles/protoc-gen-rpc.dir/build.make muduo/protorpc2/CMakeFiles/protoc-gen-rpc.dir/cpp_service.cc.s
+	cd /home/kong/exercise/muduo_protorpc && $(MAKE) -f muduo/protorpc2/CMakeFiles/protoc-gen-rpc.dir/build.make muduo/protorpc2/CMakeFiles/protoc-gen-rpc.dir/cpp_service.cc.s
 .PHONY : cpp_service.cc.s
 
 gen.o: gen.cc.o
@@ -298,7 +298,7 @@ gen.o: gen.cc.o
 
 # target to build an object file
 gen.cc.o:
-	cd /home/kong/exercise && $(MAKE) -f muduo/protorpc2/CMakeFiles/protoc-gen-rpc.dir/build.make muduo/protorpc2/CMakeFiles/protoc-gen-rpc.dir/gen.cc.o
+	cd /home/kong/exercise/muduo_protorpc && $(MAKE) -f muduo/protorpc2/CMakeFiles/protoc-gen-rpc.dir/build.make muduo/protorpc2/CMakeFiles/protoc-gen-rpc.dir/gen.cc.o
 .PHONY : gen.cc.o
 
 gen.i: gen.cc.i
@@ -307,7 +307,7 @@ gen.i: gen.cc.i
 
 # target to preprocess a source file
 gen.cc.i:
-	cd /home/kong/exercise && $(MAKE) -f muduo/protorpc2/CMakeFiles/protoc-gen-rpc.dir/build.make muduo/protorpc2/CMakeFiles/protoc-gen-rpc.dir/gen.cc.i
+	cd /home/kong/exercise/muduo_protorpc && $(MAKE) -f muduo/protorpc2/CMakeFiles/protoc-gen-rpc.dir/build.make muduo/protorpc2/CMakeFiles/protoc-gen-rpc.dir/gen.cc.i
 .PHONY : gen.cc.i
 
 gen.s: gen.cc.s
@@ -316,7 +316,7 @@ gen.s: gen.cc.s
 
 # target to generate assembly for a file
 gen.cc.s:
-	cd /home/kong/exercise && $(MAKE) -f muduo/protorpc2/CMakeFiles/protoc-gen-rpc.dir/build.make muduo/protorpc2/CMakeFiles/protoc-gen-rpc.dir/gen.cc.s
+	cd /home/kong/exercise/muduo_protorpc && $(MAKE) -f muduo/protorpc2/CMakeFiles/protoc-gen-rpc.dir/build.make muduo/protorpc2/CMakeFiles/protoc-gen-rpc.dir/gen.cc.s
 .PHONY : gen.cc.s
 
 rpc2.pb.o: rpc2.pb.cc.o
@@ -325,7 +325,7 @@ rpc2.pb.o: rpc2.pb.cc.o
 
 # target to build an object file
 rpc2.pb.cc.o:
-	cd /home/kong/exercise && $(MAKE) -f muduo/protorpc2/CMakeFiles/muduo_protorpc2.dir/build.make muduo/protorpc2/CMakeFiles/muduo_protorpc2.dir/rpc2.pb.cc.o
+	cd /home/kong/exercise/muduo_protorpc && $(MAKE) -f muduo/protorpc2/CMakeFiles/muduo_protorpc2.dir/build.make muduo/protorpc2/CMakeFiles/muduo_protorpc2.dir/rpc2.pb.cc.o
 .PHONY : rpc2.pb.cc.o
 
 rpc2.pb.i: rpc2.pb.cc.i
@@ -334,7 +334,7 @@ rpc2.pb.i: rpc2.pb.cc.i
 
 # target to preprocess a source file
 rpc2.pb.cc.i:
-	cd /home/kong/exercise && $(MAKE) -f muduo/protorpc2/CMakeFiles/muduo_protorpc2.dir/build.make muduo/protorpc2/CMakeFiles/muduo_protorpc2.dir/rpc2.pb.cc.i
+	cd /home/kong/exercise/muduo_protorpc && $(MAKE) -f muduo/protorpc2/CMakeFiles/muduo_protorpc2.dir/build.make muduo/protorpc2/CMakeFiles/muduo_protorpc2.dir/rpc2.pb.cc.i
 .PHONY : rpc2.pb.cc.i
 
 rpc2.pb.s: rpc2.pb.cc.s
@@ -343,7 +343,7 @@ rpc2.pb.s: rpc2.pb.cc.s
 
 # target to generate assembly for a file
 rpc2.pb.cc.s:
-	cd /home/kong/exercise && $(MAKE) -f muduo/protorpc2/CMakeFiles/muduo_protorpc2.dir/build.make muduo/protorpc2/CMakeFiles/muduo_protorpc2.dir/rpc2.pb.cc.s
+	cd /home/kong/exercise/muduo_protorpc && $(MAKE) -f muduo/protorpc2/CMakeFiles/muduo_protorpc2.dir/build.make muduo/protorpc2/CMakeFiles/muduo_protorpc2.dir/rpc2.pb.cc.s
 .PHONY : rpc2.pb.cc.s
 
 rpcservice.pb.o: rpcservice.pb.cc.o
@@ -352,7 +352,7 @@ rpcservice.pb.o: rpcservice.pb.cc.o
 
 # target to build an object file
 rpcservice.pb.cc.o:
-	cd /home/kong/exercise && $(MAKE) -f muduo/protorpc2/CMakeFiles/muduo_protorpc2.dir/build.make muduo/protorpc2/CMakeFiles/muduo_protorpc2.dir/rpcservice.pb.cc.o
+	cd /home/kong/exercise/muduo_protorpc && $(MAKE) -f muduo/protorpc2/CMakeFiles/muduo_protorpc2.dir/build.make muduo/protorpc2/CMakeFiles/muduo_protorpc2.dir/rpcservice.pb.cc.o
 .PHONY : rpcservice.pb.cc.o
 
 rpcservice.pb.i: rpcservice.pb.cc.i
@@ -361,7 +361,7 @@ rpcservice.pb.i: rpcservice.pb.cc.i
 
 # target to preprocess a source file
 rpcservice.pb.cc.i:
-	cd /home/kong/exercise && $(MAKE) -f muduo/protorpc2/CMakeFiles/muduo_protorpc2.dir/build.make muduo/protorpc2/CMakeFiles/muduo_protorpc2.dir/rpcservice.pb.cc.i
+	cd /home/kong/exercise/muduo_protorpc && $(MAKE) -f muduo/protorpc2/CMakeFiles/muduo_protorpc2.dir/build.make muduo/protorpc2/CMakeFiles/muduo_protorpc2.dir/rpcservice.pb.cc.i
 .PHONY : rpcservice.pb.cc.i
 
 rpcservice.pb.s: rpcservice.pb.cc.s
@@ -370,7 +370,7 @@ rpcservice.pb.s: rpcservice.pb.cc.s
 
 # target to generate assembly for a file
 rpcservice.pb.cc.s:
-	cd /home/kong/exercise && $(MAKE) -f muduo/protorpc2/CMakeFiles/muduo_protorpc2.dir/build.make muduo/protorpc2/CMakeFiles/muduo_protorpc2.dir/rpcservice.pb.cc.s
+	cd /home/kong/exercise/muduo_protorpc && $(MAKE) -f muduo/protorpc2/CMakeFiles/muduo_protorpc2.dir/build.make muduo/protorpc2/CMakeFiles/muduo_protorpc2.dir/rpcservice.pb.cc.s
 .PHONY : rpcservice.pb.cc.s
 
 # Help Target
@@ -419,6 +419,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/kong/exercise && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/kong/exercise/muduo_protorpc && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

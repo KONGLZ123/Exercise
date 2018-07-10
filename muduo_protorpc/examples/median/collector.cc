@@ -25,10 +25,11 @@ class RpcClient : boost::noncopyable
   	: loop_(loop),
   	  connectLatch_(NULL),
 	  client_(loop, addr, "RpcClient " + addr.toIpPort()),
-	  channel_(new RpcChannel)
+	  channel_(new RpcChannel),
+	  stub_(get_pointer(channel_))
   {
 	client_.setConnectionCallback(std::bind(&RpcClient::onConnection, this, _1));
-//  	client_.setMessageCallback(std::bind());
+  	client_.setMessageCallback(std::bind(&RpcChannel::onMessage, get_pointer(channel_), _1, _2, _3));
   }	
 
   void connect(CountDownLatch *connectLatch) 	{
@@ -36,10 +37,12 @@ class RpcClient : boost::noncopyable
 	client_.connect();
   }
 
+  Sorter::Stub *stub() { return &stub_; }
+
  private:
   void onConnection(const TcpConnectionPtr &conn) {
   	if (conn->connected()) {
-	  //channel_.setConnection(conn);
+	  channel_->setConnection(conn);
 	  if (connectLatch_) {
 	  	connectLatch_->countDown();
 		connectLatch_ = NULL;
@@ -51,6 +54,7 @@ class RpcClient : boost::noncopyable
   CountDownLatch *connectLatch_;	
   TcpClient client_;
   RpcChannelPtr channel_;
+  Sorter::Stub stub_;
 };
 
 class Collector : boost::noncopyable
@@ -60,21 +64,64 @@ class Collector : boost::noncopyable
 		: loop_(loop)		
 	{
 	  for (auto addr : address) {
-	  	clients_.push_back(new RpcClient(loop, addr));
+	  	sorters_.push_back(new RpcClient(loop, addr));
 	  } 
 	}
 
 	void connect() {
-	  CountDownLatch latch(static_cast<int>(clients_.size()));
-	  for (auto &client : clients_) {
+	  assert(!loop_->isInLoopThread());
+	  CountDownLatch latch(static_cast<int>(sorters_.size()));
+	  for (auto &client : sorters_) {
 	  	client.connect(&latch);
 	  }
 	  latch.wait();
 	}
 
+	void run() {
+	  QueryResponse stats;
+	  stats.set_min(std::numeric_limits<int64_t>::max());
+	  stats.set_max(std::numeric_limits<int64_t>::min());
+	  getStats(&stats);
+	  LOG_INFO << "stats:\n" << stats.DebugString();
+
+      // 求平均数
+	  const int64_t count = stats.count();
+	  if (count > 0) {
+	    LOG_INFO << "mean: " << static_cast<double>(stats.sum()) / static_cast<double>(stats.count()); 
+	  }
+   
+      // 求中值
+	  if (count <= 0) {
+	    LOG_INFO << "***** No Median";
+	  }
+	  else {
+	  
+	  }
+	}
+
  private:
+  void getStats(QueryResponse *result) {
+    assert(!loop_->isInLoopThread());
+	CountDownLatch latch(static_cast<int>(sorters_.size()));
+	for (RpcClient& sorter : sorters_) {
+	  ::rpc2::Empty req;
+	  sorter.stub()->Query(req, [this, result, &latch](const QueryResponsePtr& resp) {
+	    assert(loop_->isInLoopThread());
+		result->set_count(result->count() + resp->count());
+		result->set_sum(result->sum() + resp->sum());
+        if (resp->count() > 0) {
+		  if (resp->min() < result->min()) 
+		    result->set_min(resp->min());
+		  if (resp->max() > result->max())
+		    result->set_max(resp->max());
+		}
+		latch.countDown();
+	  });
+	}
+  }
+
   EventLoop *loop_; 
-  boost::ptr_vector<RpcClient> clients_;
+  boost::ptr_vector<RpcClient> sorters_;
 };
 
 }
@@ -105,5 +152,9 @@ int main(int argc, char *argv[])
 		LOG_INFO << "Starting";
 		EventLoopThread loop;
 		median::Collector collector(loop.startLoop(), getAddress(argc, argv));
+        collector.connect();
+		collector.run();
 	}
 }
+
+

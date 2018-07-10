@@ -4,8 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/kong/exercise/muduo/protorpc2/cpp_service.cc" "/home/kong/exercise/muduo/protorpc2/CMakeFiles/protoc-gen-rpc.dir/cpp_service.cc.o"
-  "/home/kong/exercise/muduo/protorpc2/gen.cc" "/home/kong/exercise/muduo/protorpc2/CMakeFiles/protoc-gen-rpc.dir/gen.cc.o"
+  "/home/kong/exercise/muduo_protorpc/muduo/protorpc2/cpp_service.cc" "/home/kong/exercise/muduo_protorpc/muduo/protorpc2/CMakeFiles/protoc-gen-rpc.dir/cpp_service.cc.o"
+  "/home/kong/exercise/muduo_protorpc/muduo/protorpc2/gen.cc" "/home/kong/exercise/muduo_protorpc/muduo/protorpc2/CMakeFiles/protoc-gen-rpc.dir/gen.cc.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

@@ -1,2 +1,0 @@
-# Hashes of file build rules.
-69bbcd82ca1b2abde4ac01df9c65fadb median/median.pb.cc

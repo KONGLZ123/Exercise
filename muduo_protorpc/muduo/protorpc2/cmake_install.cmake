@@ -1,4 +1,4 @@
-# Install script for directory: /home/kong/exercise/muduo/protorpc2
+# Install script for directory: /home/kong/exercise/muduo_protorpc/muduo/protorpc2
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,7 +39,7 @@ if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/protoc-gen-rpc"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "/home/kong/exercise/bin/protoc-gen-rpc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "/home/kong/exercise/muduo_protorpc/bin/protoc-gen-rpc")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/protoc-gen-rpc" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/protoc-gen-rpc")
     file(RPATH_CHANGE
@@ -53,16 +53,16 @@ if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "/home/kong/exercise/muduo/protorpc2/libmuduo_protorpc2.a")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "/home/kong/exercise/muduo_protorpc/muduo/protorpc2/libmuduo_protorpc2.a")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/muduo/protorpc2" TYPE FILE FILES
-    "/home/kong/exercise/muduo/protorpc2/RpcChannel.h"
-    "/home/kong/exercise/muduo/protorpc2/RpcServer.h"
-    "/home/kong/exercise/muduo/protorpc2/RpcService.h"
-    "/home/kong/exercise/muduo/protorpc2/service.h"
-    "/home/kong/exercise/muduo/protorpc2/rpcservice.pb.h"
+    "/home/kong/exercise/muduo_protorpc/muduo/protorpc2/RpcChannel.h"
+    "/home/kong/exercise/muduo_protorpc/muduo/protorpc2/RpcServer.h"
+    "/home/kong/exercise/muduo_protorpc/muduo/protorpc2/RpcService.h"
+    "/home/kong/exercise/muduo_protorpc/muduo/protorpc2/service.h"
+    "/home/kong/exercise/muduo_protorpc/muduo/protorpc2/rpcservice.pb.h"
     )
 endif()
 

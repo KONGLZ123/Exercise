@@ -6,7 +6,7 @@ CXX_FLAGS = -g -Wall -Wextra -Werror -Wconversion -Wno-unused-parameter -Wold-st
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/kong/exercise -I/home/kong/project/build/release-install-cpp11/include 
+CXX_INCLUDES = -I/home/kong/exercise/muduo_protorpc -I/home/kong/project/build/release-install-cpp11/include 
 
 # Custom flags: examples/median/CMakeFiles/median_proto.dir/median.pb.cc.o_FLAGS = -Wno-conversion
 

@@ -1,6 +1,0 @@
-/home/kong/exercise/examples/CMakeFiles/edit_cache.dir
-/home/kong/exercise/examples/CMakeFiles/rebuild_cache.dir
-/home/kong/exercise/examples/median/CMakeFiles/edit_cache.dir
-/home/kong/exercise/examples/median/CMakeFiles/median_collector.dir
-/home/kong/exercise/examples/median/CMakeFiles/rebuild_cache.dir
-/home/kong/exercise/examples/median/CMakeFiles/median_proto.dir

@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/kong/exercise/examples/median/collector.cc" "/home/kong/exercise/examples/median/CMakeFiles/median_collector.dir/collector.cc.o"
+  "/home/kong/exercise/muduo_protorpc/examples/median/collector.cc" "/home/kong/exercise/muduo_protorpc/examples/median/CMakeFiles/median_collector.dir/collector.cc.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -16,8 +16,8 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/kong/exercise/examples/median/CMakeFiles/median_proto.dir/DependInfo.cmake"
-  "/home/kong/exercise/muduo/protorpc2/CMakeFiles/muduo_protorpc2.dir/DependInfo.cmake"
+  "/home/kong/exercise/muduo_protorpc/examples/median/CMakeFiles/median_proto.dir/DependInfo.cmake"
+  "/home/kong/exercise/muduo_protorpc/muduo/protorpc2/CMakeFiles/muduo_protorpc2.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

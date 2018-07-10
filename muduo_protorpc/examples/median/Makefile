@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/kong/exercise
+CMAKE_SOURCE_DIR = /home/kong/exercise/muduo_protorpc
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/kong/exercise
+CMAKE_BINARY_DIR = /home/kong/exercise/muduo_protorpc
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -124,14 +124,14 @@ install/strip/fast: install/strip
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/kong/exercise && $(CMAKE_COMMAND) -E cmake_progress_start /home/kong/exercise/CMakeFiles /home/kong/exercise/examples/median/CMakeFiles/progress.marks
-	cd /home/kong/exercise && $(MAKE) -f CMakeFiles/Makefile2 examples/median/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kong/exercise/CMakeFiles 0
+	cd /home/kong/exercise/muduo_protorpc && $(CMAKE_COMMAND) -E cmake_progress_start /home/kong/exercise/muduo_protorpc/CMakeFiles /home/kong/exercise/muduo_protorpc/examples/median/CMakeFiles/progress.marks
+	cd /home/kong/exercise/muduo_protorpc && $(MAKE) -f CMakeFiles/Makefile2 examples/median/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kong/exercise/muduo_protorpc/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/kong/exercise && $(MAKE) -f CMakeFiles/Makefile2 examples/median/clean
+	cd /home/kong/exercise/muduo_protorpc && $(MAKE) -f CMakeFiles/Makefile2 examples/median/clean
 .PHONY : clean
 
 # The main clean target
@@ -141,22 +141,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/kong/exercise && $(MAKE) -f CMakeFiles/Makefile2 examples/median/preinstall
+	cd /home/kong/exercise/muduo_protorpc && $(MAKE) -f CMakeFiles/Makefile2 examples/median/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/kong/exercise && $(MAKE) -f CMakeFiles/Makefile2 examples/median/preinstall
+	cd /home/kong/exercise/muduo_protorpc && $(MAKE) -f CMakeFiles/Makefile2 examples/median/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/kong/exercise && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/kong/exercise/muduo_protorpc && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 examples/median/CMakeFiles/median_proto.dir/rule:
-	cd /home/kong/exercise && $(MAKE) -f CMakeFiles/Makefile2 examples/median/CMakeFiles/median_proto.dir/rule
+	cd /home/kong/exercise/muduo_protorpc && $(MAKE) -f CMakeFiles/Makefile2 examples/median/CMakeFiles/median_proto.dir/rule
 .PHONY : examples/median/CMakeFiles/median_proto.dir/rule
 
 # Convenience name for target.
@@ -166,12 +166,12 @@ median_proto: examples/median/CMakeFiles/median_proto.dir/rule
 
 # fast build rule for target.
 median_proto/fast:
-	cd /home/kong/exercise && $(MAKE) -f examples/median/CMakeFiles/median_proto.dir/build.make examples/median/CMakeFiles/median_proto.dir/build
+	cd /home/kong/exercise/muduo_protorpc && $(MAKE) -f examples/median/CMakeFiles/median_proto.dir/build.make examples/median/CMakeFiles/median_proto.dir/build
 .PHONY : median_proto/fast
 
 # Convenience name for target.
 examples/median/CMakeFiles/median_collector.dir/rule:
-	cd /home/kong/exercise && $(MAKE) -f CMakeFiles/Makefile2 examples/median/CMakeFiles/median_collector.dir/rule
+	cd /home/kong/exercise/muduo_protorpc && $(MAKE) -f CMakeFiles/Makefile2 examples/median/CMakeFiles/median_collector.dir/rule
 .PHONY : examples/median/CMakeFiles/median_collector.dir/rule
 
 # Convenience name for target.
@@ -181,7 +181,7 @@ median_collector: examples/median/CMakeFiles/median_collector.dir/rule
 
 # fast build rule for target.
 median_collector/fast:
-	cd /home/kong/exercise && $(MAKE) -f examples/median/CMakeFiles/median_collector.dir/build.make examples/median/CMakeFiles/median_collector.dir/build
+	cd /home/kong/exercise/muduo_protorpc && $(MAKE) -f examples/median/CMakeFiles/median_collector.dir/build.make examples/median/CMakeFiles/median_collector.dir/build
 .PHONY : median_collector/fast
 
 collector.o: collector.cc.o
@@ -190,7 +190,7 @@ collector.o: collector.cc.o
 
 # target to build an object file
 collector.cc.o:
-	cd /home/kong/exercise && $(MAKE) -f examples/median/CMakeFiles/median_collector.dir/build.make examples/median/CMakeFiles/median_collector.dir/collector.cc.o
+	cd /home/kong/exercise/muduo_protorpc && $(MAKE) -f examples/median/CMakeFiles/median_collector.dir/build.make examples/median/CMakeFiles/median_collector.dir/collector.cc.o
 .PHONY : collector.cc.o
 
 collector.i: collector.cc.i
@@ -199,7 +199,7 @@ collector.i: collector.cc.i
 
 # target to preprocess a source file
 collector.cc.i:
-	cd /home/kong/exercise && $(MAKE) -f examples/median/CMakeFiles/median_collector.dir/build.make examples/median/CMakeFiles/median_collector.dir/collector.cc.i
+	cd /home/kong/exercise/muduo_protorpc && $(MAKE) -f examples/median/CMakeFiles/median_collector.dir/build.make examples/median/CMakeFiles/median_collector.dir/collector.cc.i
 .PHONY : collector.cc.i
 
 collector.s: collector.cc.s
@@ -208,7 +208,7 @@ collector.s: collector.cc.s
 
 # target to generate assembly for a file
 collector.cc.s:
-	cd /home/kong/exercise && $(MAKE) -f examples/median/CMakeFiles/median_collector.dir/build.make examples/median/CMakeFiles/median_collector.dir/collector.cc.s
+	cd /home/kong/exercise/muduo_protorpc && $(MAKE) -f examples/median/CMakeFiles/median_collector.dir/build.make examples/median/CMakeFiles/median_collector.dir/collector.cc.s
 .PHONY : collector.cc.s
 
 median.pb.o: median.pb.cc.o
@@ -217,7 +217,7 @@ median.pb.o: median.pb.cc.o
 
 # target to build an object file
 median.pb.cc.o:
-	cd /home/kong/exercise && $(MAKE) -f examples/median/CMakeFiles/median_proto.dir/build.make examples/median/CMakeFiles/median_proto.dir/median.pb.cc.o
+	cd /home/kong/exercise/muduo_protorpc && $(MAKE) -f examples/median/CMakeFiles/median_proto.dir/build.make examples/median/CMakeFiles/median_proto.dir/median.pb.cc.o
 .PHONY : median.pb.cc.o
 
 median.pb.i: median.pb.cc.i
@@ -226,7 +226,7 @@ median.pb.i: median.pb.cc.i
 
 # target to preprocess a source file
 median.pb.cc.i:
-	cd /home/kong/exercise && $(MAKE) -f examples/median/CMakeFiles/median_proto.dir/build.make examples/median/CMakeFiles/median_proto.dir/median.pb.cc.i
+	cd /home/kong/exercise/muduo_protorpc && $(MAKE) -f examples/median/CMakeFiles/median_proto.dir/build.make examples/median/CMakeFiles/median_proto.dir/median.pb.cc.i
 .PHONY : median.pb.cc.i
 
 median.pb.s: median.pb.cc.s
@@ -235,7 +235,7 @@ median.pb.s: median.pb.cc.s
 
 # target to generate assembly for a file
 median.pb.cc.s:
-	cd /home/kong/exercise && $(MAKE) -f examples/median/CMakeFiles/median_proto.dir/build.make examples/median/CMakeFiles/median_proto.dir/median.pb.cc.s
+	cd /home/kong/exercise/muduo_protorpc && $(MAKE) -f examples/median/CMakeFiles/median_proto.dir/build.make examples/median/CMakeFiles/median_proto.dir/median.pb.cc.s
 .PHONY : median.pb.cc.s
 
 # Help Target
@@ -269,6 +269,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/kong/exercise && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/kong/exercise/muduo_protorpc && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

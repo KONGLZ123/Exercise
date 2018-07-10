@@ -1,3 +1,3 @@
 # Hashes of file build rules.
-fdd0a0ce57b72b436c84b28f9a4ad09d examples/median/median.pb.cc
-dff3241e8f7baaa4c2562e41a78834aa muduo/protorpc2/rpcservice.pb.cc
+c96cccf9d8686008685847c9f13ea012 examples/median/median.pb.cc
+738f2041cd3df17f338ec8936530ac0d muduo/protorpc2/rpcservice.pb.cc

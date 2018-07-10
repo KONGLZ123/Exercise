@@ -6,13 +6,13 @@
 
 #IncludeRegexTransform: 
 
-/home/kong/exercise/muduo/protorpc2/cpp_service.cc
+/home/kong/exercise/muduo_protorpc/muduo/protorpc2/cpp_service.cc
 muduo/protorpc2/cpp_service.h
 -
 google/protobuf/io/printer.h
 -
 
-/home/kong/exercise/muduo/protorpc2/gen.cc
+/home/kong/exercise/muduo_protorpc/muduo/protorpc2/gen.cc
 memory
 -
 string

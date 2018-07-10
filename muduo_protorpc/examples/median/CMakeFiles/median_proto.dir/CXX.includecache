@@ -6,9 +6,9 @@
 
 #IncludeRegexTransform: 
 
-/home/kong/exercise/examples/median/median.pb.cc
+/home/kong/exercise/muduo_protorpc/examples/median/median.pb.cc
 median.pb.h
-/home/kong/exercise/examples/median/median.pb.h
+/home/kong/exercise/muduo_protorpc/examples/median/median.pb.h
 algorithm
 -
 google/protobuf/stubs/common.h
@@ -28,7 +28,7 @@ google/protobuf/reflection_ops.h
 google/protobuf/wire_format.h
 -
 
-/home/kong/exercise/examples/median/median.pb.h
+/home/kong/exercise/muduo_protorpc/examples/median/median.pb.h
 string
 -
 google/protobuf/stubs/common.h
@@ -44,7 +44,7 @@ google/protobuf/extension_set.h
 google/protobuf/unknown_field_set.h
 -
 muduo/protorpc2/rpc2.pb.h
-/home/kong/exercise/examples/median/muduo/protorpc2/rpc2.pb.h
+/home/kong/exercise/muduo_protorpc/examples/median/muduo/protorpc2/rpc2.pb.h
 muduo/protorpc2/service.h
 -
 memory

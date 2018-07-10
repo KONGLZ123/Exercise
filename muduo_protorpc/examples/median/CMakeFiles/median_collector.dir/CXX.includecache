@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/kong/exercise/examples/median/collector.cc
+/home/kong/exercise/muduo_protorpc/examples/median/collector.cc
 vector
 -
 string

@@ -1,4 +1,4 @@
-# Install script for directory: /home/kong/exercise
+# Install script for directory: /home/kong/exercise/muduo_protorpc
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,8 +34,8 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/kong/exercise/muduo/protorpc2/cmake_install.cmake")
-  include("/home/kong/exercise/examples/cmake_install.cmake")
+  include("/home/kong/exercise/muduo_protorpc/muduo/protorpc2/cmake_install.cmake")
+  include("/home/kong/exercise/muduo_protorpc/examples/cmake_install.cmake")
 
 endif()
 
@@ -47,5 +47,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/kong/exercise/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/kong/exercise/muduo_protorpc/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

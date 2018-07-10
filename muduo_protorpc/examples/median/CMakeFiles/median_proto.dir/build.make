@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/kong/exercise
+CMAKE_SOURCE_DIR = /home/kong/exercise/muduo_protorpc
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/kong/exercise
+CMAKE_BINARY_DIR = /home/kong/exercise/muduo_protorpc
 
 # Include any dependencies generated for this target.
 include examples/median/CMakeFiles/median_proto.dir/depend.make
@@ -59,24 +59,24 @@ include examples/median/CMakeFiles/median_proto.dir/flags.make
 
 examples/median/median.pb.cc: bin/protoc-gen-rpc
 examples/median/median.pb.cc: examples/median/median.proto
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/kong/exercise/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating median.pb.cc, median.pb.h"
-	cd /home/kong/exercise/examples/median && /usr/bin/protoc --plugin=/home/kong/exercise/bin/protoc-gen-rpc --cpp_out . --rpc_out . /home/kong/exercise/examples/median/median.proto -I/home/kong/exercise/examples/median -I/home/kong/exercise -I/usr/include
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/kong/exercise/muduo_protorpc/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating median.pb.cc, median.pb.h"
+	cd /home/kong/exercise/muduo_protorpc/examples/median && /usr/bin/protoc --plugin=/home/kong/exercise/muduo_protorpc/bin/protoc-gen-rpc --cpp_out . --rpc_out . /home/kong/exercise/muduo_protorpc/examples/median/median.proto -I/home/kong/exercise/muduo_protorpc/examples/median -I/home/kong/exercise/muduo_protorpc -I/usr/include
 
 examples/median/median.pb.h: examples/median/median.pb.cc
 	@$(CMAKE_COMMAND) -E touch_nocreate examples/median/median.pb.h
 
 examples/median/CMakeFiles/median_proto.dir/median.pb.cc.o: examples/median/CMakeFiles/median_proto.dir/flags.make
 examples/median/CMakeFiles/median_proto.dir/median.pb.cc.o: examples/median/median.pb.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kong/exercise/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object examples/median/CMakeFiles/median_proto.dir/median.pb.cc.o"
-	cd /home/kong/exercise/examples/median && g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Wno-conversion -o CMakeFiles/median_proto.dir/median.pb.cc.o -c /home/kong/exercise/examples/median/median.pb.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kong/exercise/muduo_protorpc/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object examples/median/CMakeFiles/median_proto.dir/median.pb.cc.o"
+	cd /home/kong/exercise/muduo_protorpc/examples/median && g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Wno-conversion -o CMakeFiles/median_proto.dir/median.pb.cc.o -c /home/kong/exercise/muduo_protorpc/examples/median/median.pb.cc
 
 examples/median/CMakeFiles/median_proto.dir/median.pb.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/median_proto.dir/median.pb.cc.i"
-	cd /home/kong/exercise/examples/median && g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Wno-conversion -E /home/kong/exercise/examples/median/median.pb.cc > CMakeFiles/median_proto.dir/median.pb.cc.i
+	cd /home/kong/exercise/muduo_protorpc/examples/median && g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Wno-conversion -E /home/kong/exercise/muduo_protorpc/examples/median/median.pb.cc > CMakeFiles/median_proto.dir/median.pb.cc.i
 
 examples/median/CMakeFiles/median_proto.dir/median.pb.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/median_proto.dir/median.pb.cc.s"
-	cd /home/kong/exercise/examples/median && g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Wno-conversion -S /home/kong/exercise/examples/median/median.pb.cc -o CMakeFiles/median_proto.dir/median.pb.cc.s
+	cd /home/kong/exercise/muduo_protorpc/examples/median && g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Wno-conversion -S /home/kong/exercise/muduo_protorpc/examples/median/median.pb.cc -o CMakeFiles/median_proto.dir/median.pb.cc.s
 
 examples/median/CMakeFiles/median_proto.dir/median.pb.cc.o.requires:
 
@@ -99,9 +99,9 @@ median_proto_EXTERNAL_OBJECTS =
 examples/median/libmedian_proto.a: examples/median/CMakeFiles/median_proto.dir/median.pb.cc.o
 examples/median/libmedian_proto.a: examples/median/CMakeFiles/median_proto.dir/build.make
 examples/median/libmedian_proto.a: examples/median/CMakeFiles/median_proto.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/kong/exercise/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX static library libmedian_proto.a"
-	cd /home/kong/exercise/examples/median && $(CMAKE_COMMAND) -P CMakeFiles/median_proto.dir/cmake_clean_target.cmake
-	cd /home/kong/exercise/examples/median && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/median_proto.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/kong/exercise/muduo_protorpc/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX static library libmedian_proto.a"
+	cd /home/kong/exercise/muduo_protorpc/examples/median && $(CMAKE_COMMAND) -P CMakeFiles/median_proto.dir/cmake_clean_target.cmake
+	cd /home/kong/exercise/muduo_protorpc/examples/median && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/median_proto.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 examples/median/CMakeFiles/median_proto.dir/build: examples/median/libmedian_proto.a
@@ -113,11 +113,11 @@ examples/median/CMakeFiles/median_proto.dir/requires: examples/median/CMakeFiles
 .PHONY : examples/median/CMakeFiles/median_proto.dir/requires
 
 examples/median/CMakeFiles/median_proto.dir/clean:
-	cd /home/kong/exercise/examples/median && $(CMAKE_COMMAND) -P CMakeFiles/median_proto.dir/cmake_clean.cmake
+	cd /home/kong/exercise/muduo_protorpc/examples/median && $(CMAKE_COMMAND) -P CMakeFiles/median_proto.dir/cmake_clean.cmake
 .PHONY : examples/median/CMakeFiles/median_proto.dir/clean
 
 examples/median/CMakeFiles/median_proto.dir/depend: examples/median/median.pb.cc
 examples/median/CMakeFiles/median_proto.dir/depend: examples/median/median.pb.h
-	cd /home/kong/exercise && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/kong/exercise /home/kong/exercise/examples/median /home/kong/exercise /home/kong/exercise/examples/median /home/kong/exercise/examples/median/CMakeFiles/median_proto.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/kong/exercise/muduo_protorpc && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/kong/exercise/muduo_protorpc /home/kong/exercise/muduo_protorpc/examples/median /home/kong/exercise/muduo_protorpc /home/kong/exercise/muduo_protorpc/examples/median /home/kong/exercise/muduo_protorpc/examples/median/CMakeFiles/median_proto.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : examples/median/CMakeFiles/median_proto.dir/depend
 
