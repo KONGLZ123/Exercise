@@ -8,3 +8,7 @@ set_source_files_properties(${PROTO_SRCS} PROPERTIES COMPILE_FLAGS "-Wno-convers
 add_executable(median_collector collector.cc)
 target_link_libraries(median_collector median_proto muduo_protorpc2)
 
+
+add_executable(median_sorter sorter.cc)
+target_link_libraries(median_sorter median_proto muduo_protorpc2)
+

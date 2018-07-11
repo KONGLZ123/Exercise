@@ -181,6 +181,19 @@ muduo_protorpc2/fast:
 .PHONY : muduo_protorpc2/fast
 
 #=============================================================================
+# Target rules for targets named median_collector
+
+# Build rule for target.
+median_collector: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 median_collector
+.PHONY : median_collector
+
+# fast build rule for target.
+median_collector/fast:
+	$(MAKE) -f examples/median/CMakeFiles/median_collector.dir/build.make examples/median/CMakeFiles/median_collector.dir/build
+.PHONY : median_collector/fast
+
+#=============================================================================
 # Target rules for targets named median_proto
 
 # Build rule for target.
@@ -194,17 +207,17 @@ median_proto/fast:
 .PHONY : median_proto/fast
 
 #=============================================================================
-# Target rules for targets named median_collector
+# Target rules for targets named median_sorter
 
 # Build rule for target.
-median_collector: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 median_collector
-.PHONY : median_collector
+median_sorter: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 median_sorter
+.PHONY : median_sorter
 
 # fast build rule for target.
-median_collector/fast:
-	$(MAKE) -f examples/median/CMakeFiles/median_collector.dir/build.make examples/median/CMakeFiles/median_collector.dir/build
-.PHONY : median_collector/fast
+median_sorter/fast:
+	$(MAKE) -f examples/median/CMakeFiles/median_sorter.dir/build.make examples/median/CMakeFiles/median_sorter.dir/build
+.PHONY : median_sorter/fast
 
 # Help Target
 help:
@@ -220,8 +233,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... protoc-gen-rpc"
 	@echo "... muduo_protorpc2"
-	@echo "... median_proto"
 	@echo "... median_collector"
+	@echo "... median_proto"
+	@echo "... median_sorter"
 .PHONY : help
 
 

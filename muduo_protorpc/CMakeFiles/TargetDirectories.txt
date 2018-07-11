@@ -22,7 +22,8 @@
 /home/kong/exercise/muduo_protorpc/examples/median/CMakeFiles/list_install_components.dir
 /home/kong/exercise/muduo_protorpc/examples/median/CMakeFiles/rebuild_cache.dir
 /home/kong/exercise/muduo_protorpc/examples/median/CMakeFiles/edit_cache.dir
-/home/kong/exercise/muduo_protorpc/examples/median/CMakeFiles/median_proto.dir
 /home/kong/exercise/muduo_protorpc/examples/median/CMakeFiles/median_collector.dir
+/home/kong/exercise/muduo_protorpc/examples/median/CMakeFiles/median_proto.dir
+/home/kong/exercise/muduo_protorpc/examples/median/CMakeFiles/median_sorter.dir
 /home/kong/exercise/muduo_protorpc/examples/median/CMakeFiles/install/local.dir
 /home/kong/exercise/muduo_protorpc/examples/median/CMakeFiles/install/strip.dir

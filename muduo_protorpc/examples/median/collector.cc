@@ -10,6 +10,7 @@
 #include <boost/core/noncopyable.hpp>
 #include <boost/ptr_container/ptr_vector.hpp>
 #include <examples/median/median.pb.h>
+#include <examples/median/kth.h>
 
 using namespace muduo;
 using namespace muduo::net;
@@ -63,12 +64,14 @@ class Collector : boost::noncopyable
   	Collector(EventLoop* loop, const std::vector<InetAddress>& address)
 		: loop_(loop)		
 	{
-	  for (auto addr : address) {
+	  LOG_INFO << "Collector constructor";
+ 	  for (auto addr : address) {
 	  	sorters_.push_back(new RpcClient(loop, addr));
 	  } 
 	}
 
 	void connect() {
+	  LOG_INFO << "connect";
 	  assert(!loop_->isInLoopThread());
 	  CountDownLatch latch(static_cast<int>(sorters_.size()));
 	  for (auto &client : sorters_) {
@@ -78,6 +81,7 @@ class Collector : boost::noncopyable
 	}
 
 	void run() {
+	  LOG_INFO << "run";
 	  QueryResponse stats;
 	  stats.set_min(std::numeric_limits<int64_t>::max());
 	  stats.set_max(std::numeric_limits<int64_t>::min());
@@ -86,6 +90,7 @@ class Collector : boost::noncopyable
 
       // 求平均数
 	  const int64_t count = stats.count();
+	  LOG_INFO << "count: " << count;
 	  if (count > 0) {
 	    LOG_INFO << "mean: " << static_cast<double>(stats.sum()) / static_cast<double>(stats.count()); 
 	  }
@@ -95,18 +100,29 @@ class Collector : boost::noncopyable
 	    LOG_INFO << "***** No Median";
 	  }
 	  else {
-	  
+        const int64_t k = (count + 1) / 2;
+		std::pair<int64_t, bool> median = getKth(std::bind(&Collector::search, this, _1, _2, _3), k, count, stats.min(), stats.max());
+		if (median.second) {
+		  LOG_INFO << "********** Median is " << median.first;
+		}
+		else {
+		  LOG_ERROR << "********************** Median not found";
+		}
 	  }
 	}
 
  private:
   void getStats(QueryResponse *result) {
+    LOG_INFO << "getStats";
     assert(!loop_->isInLoopThread());
 	CountDownLatch latch(static_cast<int>(sorters_.size()));
+	LOG_INFO << "sorters_.size(): " << sorters_.size();
 	for (RpcClient& sorter : sorters_) {
 	  ::rpc2::Empty req;
+	  LOG_INFO << "for RpcClient";
 	  sorter.stub()->Query(req, [this, result, &latch](const QueryResponsePtr& resp) {
-	    assert(loop_->isInLoopThread());
+	    LOG_INFO << "call Query";
+		assert(loop_->isInLoopThread());
 		result->set_count(result->count() + resp->count());
 		result->set_sum(result->sum() + resp->sum());
         if (resp->count() > 0) {
@@ -117,7 +133,28 @@ class Collector : boost::noncopyable
 		}
 		latch.countDown();
 	  });
+    }
+	latch.wait();
+  }
+
+  void search(int64_t guess, int64_t* smaller, int64_t* same) {
+    LOG_INFO << "search";
+    assert(!loop_->isInLoopThread());
+	*smaller = 0;
+	*same = 0;
+	CountDownLatch latch(static_cast<int>(sorters_.size()));
+	for (RpcClient& sorter : sorters_) {
+      SearchRequest req;
+	  req.set_guess(guess);
+	  sorter.stub()->Search(req, [this, smaller, same, &latch](const SearchResponsePtr& resp) { 
+          LOG_INFO << "call Search";
+		  assert(loop_->isInLoopThread());
+		  *smaller += resp->smaller();
+		  *same += resp->same();
+		  latch.countDown();
+		});
 	}
+	latch.wait();
   }
 
   EventLoop *loop_; 
@@ -153,7 +190,11 @@ int main(int argc, char *argv[])
 		EventLoopThread loop;
 		median::Collector collector(loop.startLoop(), getAddress(argc, argv));
         collector.connect();
-		collector.run();
+	    LOG_INFO << "All connected";
+	    collector.run();
+	}
+	else {
+	  printf("Usage: %s sorter_addresses\n", argv[0]);
 	}
 }
 

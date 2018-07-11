@@ -1,0 +1,1 @@
+/usr/bin/c++      CMakeFiles/median_sorter.dir/sorter.o  -o median_sorter  -L/home/kong/exercise/muduo_protorpc/examples/median/median -rdynamic libmedian_proto.a -lmuduo_protorpc2 

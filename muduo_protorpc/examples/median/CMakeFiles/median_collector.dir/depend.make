@@ -26,6 +26,7 @@ examples/median/CMakeFiles/median_collector.dir/collector.cc.o: /home/kong/proje
 examples/median/CMakeFiles/median_collector.dir/collector.cc.o: /home/kong/project/build/release-install-cpp11/include/muduo/net/TimerId.h
 examples/median/CMakeFiles/median_collector.dir/collector.cc.o: /home/kong/project/build/release-install-cpp11/include/muduo/net/protobuf/ProtobufCodecLite.h
 examples/median/CMakeFiles/median_collector.dir/collector.cc.o: /home/kong/project/build/release-install-cpp11/include/muduo/net/protorpc/RpcCodec.h
+examples/median/CMakeFiles/median_collector.dir/collector.cc.o: examples/median/kth.h
 examples/median/CMakeFiles/median_collector.dir/collector.cc.o: examples/median/median.pb.h
 examples/median/CMakeFiles/median_collector.dir/collector.cc.o: muduo/protorpc2/RpcChannel.h
 examples/median/CMakeFiles/median_collector.dir/collector.cc.o: muduo/protorpc2/rpc2.pb.h

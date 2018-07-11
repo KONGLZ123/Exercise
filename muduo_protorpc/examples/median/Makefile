@@ -155,6 +155,21 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+examples/median/CMakeFiles/median_collector.dir/rule:
+	cd /home/kong/exercise/muduo_protorpc && $(MAKE) -f CMakeFiles/Makefile2 examples/median/CMakeFiles/median_collector.dir/rule
+.PHONY : examples/median/CMakeFiles/median_collector.dir/rule
+
+# Convenience name for target.
+median_collector: examples/median/CMakeFiles/median_collector.dir/rule
+
+.PHONY : median_collector
+
+# fast build rule for target.
+median_collector/fast:
+	cd /home/kong/exercise/muduo_protorpc && $(MAKE) -f examples/median/CMakeFiles/median_collector.dir/build.make examples/median/CMakeFiles/median_collector.dir/build
+.PHONY : median_collector/fast
+
+# Convenience name for target.
 examples/median/CMakeFiles/median_proto.dir/rule:
 	cd /home/kong/exercise/muduo_protorpc && $(MAKE) -f CMakeFiles/Makefile2 examples/median/CMakeFiles/median_proto.dir/rule
 .PHONY : examples/median/CMakeFiles/median_proto.dir/rule
@@ -170,19 +185,19 @@ median_proto/fast:
 .PHONY : median_proto/fast
 
 # Convenience name for target.
-examples/median/CMakeFiles/median_collector.dir/rule:
-	cd /home/kong/exercise/muduo_protorpc && $(MAKE) -f CMakeFiles/Makefile2 examples/median/CMakeFiles/median_collector.dir/rule
-.PHONY : examples/median/CMakeFiles/median_collector.dir/rule
+examples/median/CMakeFiles/median_sorter.dir/rule:
+	cd /home/kong/exercise/muduo_protorpc && $(MAKE) -f CMakeFiles/Makefile2 examples/median/CMakeFiles/median_sorter.dir/rule
+.PHONY : examples/median/CMakeFiles/median_sorter.dir/rule
 
 # Convenience name for target.
-median_collector: examples/median/CMakeFiles/median_collector.dir/rule
+median_sorter: examples/median/CMakeFiles/median_sorter.dir/rule
 
-.PHONY : median_collector
+.PHONY : median_sorter
 
 # fast build rule for target.
-median_collector/fast:
-	cd /home/kong/exercise/muduo_protorpc && $(MAKE) -f examples/median/CMakeFiles/median_collector.dir/build.make examples/median/CMakeFiles/median_collector.dir/build
-.PHONY : median_collector/fast
+median_sorter/fast:
+	cd /home/kong/exercise/muduo_protorpc && $(MAKE) -f examples/median/CMakeFiles/median_sorter.dir/build.make examples/median/CMakeFiles/median_sorter.dir/build
+.PHONY : median_sorter/fast
 
 collector.o: collector.cc.o
 
@@ -238,6 +253,33 @@ median.pb.cc.s:
 	cd /home/kong/exercise/muduo_protorpc && $(MAKE) -f examples/median/CMakeFiles/median_proto.dir/build.make examples/median/CMakeFiles/median_proto.dir/median.pb.cc.s
 .PHONY : median.pb.cc.s
 
+sorter.o: sorter.cc.o
+
+.PHONY : sorter.o
+
+# target to build an object file
+sorter.cc.o:
+	cd /home/kong/exercise/muduo_protorpc && $(MAKE) -f examples/median/CMakeFiles/median_sorter.dir/build.make examples/median/CMakeFiles/median_sorter.dir/sorter.cc.o
+.PHONY : sorter.cc.o
+
+sorter.i: sorter.cc.i
+
+.PHONY : sorter.i
+
+# target to preprocess a source file
+sorter.cc.i:
+	cd /home/kong/exercise/muduo_protorpc && $(MAKE) -f examples/median/CMakeFiles/median_sorter.dir/build.make examples/median/CMakeFiles/median_sorter.dir/sorter.cc.i
+.PHONY : sorter.cc.i
+
+sorter.s: sorter.cc.s
+
+.PHONY : sorter.s
+
+# target to generate assembly for a file
+sorter.cc.s:
+	cd /home/kong/exercise/muduo_protorpc && $(MAKE) -f examples/median/CMakeFiles/median_sorter.dir/build.make examples/median/CMakeFiles/median_sorter.dir/sorter.cc.s
+.PHONY : sorter.cc.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -248,8 +290,9 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... median_proto"
 	@echo "... median_collector"
+	@echo "... median_proto"
+	@echo "... median_sorter"
 	@echo "... install/local"
 	@echo "... install/strip"
 	@echo "... collector.o"
@@ -258,6 +301,9 @@ help:
 	@echo "... median.pb.o"
 	@echo "... median.pb.i"
 	@echo "... median.pb.s"
+	@echo "... sorter.o"
+	@echo "... sorter.i"
+	@echo "... sorter.s"
 .PHONY : help
 
 
