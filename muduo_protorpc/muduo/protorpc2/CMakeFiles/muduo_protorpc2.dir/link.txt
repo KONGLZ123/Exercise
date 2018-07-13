@@ -1,2 +1,0 @@
-/usr/bin/ar qc libmuduo_protorpc2.a  CMakeFiles/muduo_protorpc2.dir/RpcChannel.cc.o CMakeFiles/muduo_protorpc2.dir/RpcServer.cc.o CMakeFiles/muduo_protorpc2.dir/RpcService.cc.o CMakeFiles/muduo_protorpc2.dir/rpcservice.pb.cc.o CMakeFiles/muduo_protorpc2.dir/rpc2.pb.cc.o
-/usr/bin/ranlib libmuduo_protorpc2.a
