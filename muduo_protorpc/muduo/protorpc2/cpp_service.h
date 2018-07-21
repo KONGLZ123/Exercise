@@ -48,14 +48,14 @@ class ServiceGenerator {
 
   void GenerateCallMethod(io::Printer* printer);
 
-  void GenerateGetPrototype(RequestOrResponse which, io::Priner* printer);
+  void GenerateGetPrototype(RequestOrResponse which, io::Printer* printer);
 
-  void GenerateStubMethods(io::Priner* printer);
+  void GenerateStubMethods(io::Printer* printer);
 
   const ServiceDescriptor* descriptor_;
   map<string, string> vars_;
 
-  GOOGLE_DISALLOW_EVIL_CONSTRUTCTORS(ServiceGenerator);
+  GOOGLE_DISALLOW_EVIL_CONSTRUCTORS(ServiceGenerator);
 };
 
 
