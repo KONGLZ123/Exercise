@@ -1,3 +1,8 @@
-/home/kong/exercise/muduo_protorpc/muduo/protorpc2/CMakeFiles/edit_cache.dir
-/home/kong/exercise/muduo_protorpc/muduo/protorpc2/CMakeFiles/rebuild_cache.dir
-/home/kong/exercise/muduo_protorpc/muduo/protorpc2/CMakeFiles/protoc-gen-rpc.dir
+/home/kong/project/muduo-protorpc/muduo/protorpc2/CMakeFiles/rebuild_cache.dir
+/home/kong/project/muduo-protorpc/muduo/protorpc2/CMakeFiles/edit_cache.dir
+/home/kong/project/muduo-protorpc/muduo/protorpc2/CMakeFiles/protoc-gen-rpc.dir
+/home/kong/project/muduo-protorpc/muduo/protorpc2/CMakeFiles/install.dir
+/home/kong/project/muduo-protorpc/muduo/protorpc2/CMakeFiles/list_install_components.dir
+/home/kong/project/muduo-protorpc/muduo/protorpc2/CMakeFiles/muduo_protorpc2.dir
+/home/kong/project/muduo-protorpc/muduo/protorpc2/CMakeFiles/install/strip.dir
+/home/kong/project/muduo-protorpc/muduo/protorpc2/CMakeFiles/install/local.dir
