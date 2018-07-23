@@ -25,6 +25,7 @@ RpcServer::RpcServer(EventLoop* loop,
     services_(),
     metaService_(&services_)
 {
+  LOG_INFO << "--RpcServer ctor";
   server_.setConnectionCallback(
       std::bind(&RpcServer::onConnection, this, _1));
 //   server_.setMessageCallback(
@@ -37,16 +38,18 @@ void RpcServer::registerService(muduo::net::Service* service)
 {
   const google::protobuf::ServiceDescriptor* desc = service->GetDescriptor();
   services_[desc->full_name()] = service;
+  LOG_INFO << "--registerService - " << desc->full_name();
 }
 
 void RpcServer::start()
 {
+  LOG_INFO << "--start";
   server_.start();
 }
 
 void RpcServer::onConnection(const TcpConnectionPtr& conn)
 {
-  LOG_INFO << "RpcServer - " << conn->peerAddress().toIpPort() << " -> "
+  LOG_INFO << "--onConnection - " << "RpcServer - " << conn->peerAddress().toIpPort() << " -> "
     << conn->localAddress().toIpPort() << " is "
     << (conn->connected() ? "UP" : "DOWN");
   if (conn->connected())

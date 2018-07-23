@@ -1,7 +1,8 @@
 #include <muduo/protorpc2/RpcService.h>
-
+#include <muduo/base/Logging.h>
 #include <google/protobuf/descriptor.h>
 
+using namespace muduo;
 using namespace muduo::net;
 
 namespace
@@ -9,6 +10,7 @@ namespace
   void addMethodNames(const ::google::protobuf::ServiceDescriptor* sd,
                       ListRpcResponse* response)
   {
+    LOG_INFO << "--addMethodNames";
     for (int i = 0; i < sd->method_count(); ++i)
     {
       const ::google::protobuf::MethodDescriptor* method = sd->method(i);
@@ -31,6 +33,7 @@ void RpcServiceImpl::listRpc(const ListRpcRequestPtr& request,
                              const ListRpcResponse* responsePrototype,
                              const RpcDoneCallback& done)
 {
+  LOG_INFO << "--listRpc";
   ListRpcResponse response;
   if (request->has_service_name())
   {
@@ -69,6 +72,7 @@ void RpcServiceImpl::getService(const GetServiceRequestPtr& request,
                                 const GetServiceResponse* responsePrototype,
                                 const RpcDoneCallback& done)
 {
+  LOG_INFO << "getService";
   GetServiceResponse response;
   ServiceMap::const_iterator it = services_->find(request->service_name());
   if (it != services_->end())

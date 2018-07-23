@@ -35,6 +35,8 @@ google/protobuf/descriptor.h
 /home/kong/exercise/muduo_protorpc/muduo/protorpc2/RpcService.cc
 muduo/protorpc2/RpcService.h
 -
+muduo/base/Logging.h
+-
 google/protobuf/descriptor.h
 -
 

@@ -50,6 +50,8 @@ muduo/protorpc2/CMakeFiles/muduo_protorpc2.dir/RpcServer.cc.o: muduo/protorpc2/s
 muduo/protorpc2/CMakeFiles/muduo_protorpc2.dir/RpcService.cc.o: muduo/protorpc2/RpcService.cc
 muduo/protorpc2/CMakeFiles/muduo_protorpc2.dir/RpcService.cc.o: /home/kong/project/build/release-install-cpp11/include/muduo/base/Atomic.h
 muduo/protorpc2/CMakeFiles/muduo_protorpc2.dir/RpcService.cc.o: /home/kong/project/build/release-install-cpp11/include/muduo/base/CurrentThread.h
+muduo/protorpc2/CMakeFiles/muduo_protorpc2.dir/RpcService.cc.o: /home/kong/project/build/release-install-cpp11/include/muduo/base/LogStream.h
+muduo/protorpc2/CMakeFiles/muduo_protorpc2.dir/RpcService.cc.o: /home/kong/project/build/release-install-cpp11/include/muduo/base/Logging.h
 muduo/protorpc2/CMakeFiles/muduo_protorpc2.dir/RpcService.cc.o: /home/kong/project/build/release-install-cpp11/include/muduo/base/Mutex.h
 muduo/protorpc2/CMakeFiles/muduo_protorpc2.dir/RpcService.cc.o: /home/kong/project/build/release-install-cpp11/include/muduo/base/StringPiece.h
 muduo/protorpc2/CMakeFiles/muduo_protorpc2.dir/RpcService.cc.o: /home/kong/project/build/release-install-cpp11/include/muduo/base/Timestamp.h

@@ -29,11 +29,13 @@ class RpcClient : boost::noncopyable
 	  channel_(new RpcChannel),
 	  stub_(get_pointer(channel_))
   {
+    LOG_INFO << "--RpcClient ctor";
 	client_.setConnectionCallback(std::bind(&RpcClient::onConnection, this, _1));
   	client_.setMessageCallback(std::bind(&RpcChannel::onMessage, get_pointer(channel_), _1, _2, _3));
   }	
 
   void connect(CountDownLatch *connectLatch) 	{
+    LOG_INFO << "--connect";
   	connectLatch_ = connectLatch;
 	client_.connect();
   }
@@ -42,6 +44,7 @@ class RpcClient : boost::noncopyable
 
  private:
   void onConnection(const TcpConnectionPtr &conn) {
+    LOG_INFO << "--onConnection";
   	if (conn->connected()) {
 	  channel_->setConnection(conn);
 	  if (connectLatch_) {
@@ -64,14 +67,14 @@ class Collector : boost::noncopyable
   	Collector(EventLoop* loop, const std::vector<InetAddress>& address)
 		: loop_(loop)		
 	{
-	  LOG_INFO << "Collector constructor";
+	  LOG_INFO << "--Collector constructor";
  	  for (auto addr : address) {
 	  	sorters_.push_back(new RpcClient(loop, addr));
 	  } 
 	}
 
 	void connect() {
-	  LOG_INFO << "connect";
+	  LOG_INFO << "--connect";
 	  assert(!loop_->isInLoopThread());
 	  CountDownLatch latch(static_cast<int>(sorters_.size()));
 	  for (auto &client : sorters_) {
@@ -81,7 +84,7 @@ class Collector : boost::noncopyable
 	}
 
 	void run() {
-	  LOG_INFO << "run";
+	  LOG_INFO << "--run";
 	  QueryResponse stats;
 	  stats.set_min(std::numeric_limits<int64_t>::max());
 	  stats.set_max(std::numeric_limits<int64_t>::min());
@@ -113,7 +116,7 @@ class Collector : boost::noncopyable
 
  private:
   void getStats(QueryResponse *result) {
-    LOG_INFO << "getStats";
+    LOG_INFO << "--getStats";
     assert(!loop_->isInLoopThread());
 	CountDownLatch latch(static_cast<int>(sorters_.size()));
 	LOG_INFO << "sorters_.size(): " << sorters_.size();
@@ -138,7 +141,7 @@ class Collector : boost::noncopyable
   }
 
   void search(int64_t guess, int64_t* smaller, int64_t* same) {
-    LOG_INFO << "search";
+    LOG_INFO << "--search";
     assert(!loop_->isInLoopThread());
 	*smaller = 0;
 	*same = 0;
@@ -186,11 +189,11 @@ const std::vector<InetAddress> getAddress(int argc, char *argv[])
 int main(int argc, char *argv[])
 {
 	if (argc > 1) {
-		LOG_INFO << "Starting";
+		LOG_INFO << "--Collector Starting";
 		EventLoopThread loop;
 		median::Collector collector(loop.startLoop(), getAddress(argc, argv));
         collector.connect();
-	    LOG_INFO << "All connected";
+	    LOG_INFO << "--All connected";
 	    collector.run();
 	}
 	else {

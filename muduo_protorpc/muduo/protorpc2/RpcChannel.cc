@@ -37,7 +37,7 @@ RpcChannel::RpcChannel()
   : codec_(std::bind(&RpcChannel::onRpcMessage, this, _1, _2, _3)),
     services_(NULL)
 {
-  LOG_INFO << "RpcChannel::ctor - " << this;
+  LOG_INFO << "--RpcChannel::ctor - " << this;
 }
 
 RpcChannel::RpcChannel(const TcpConnectionPtr& conn)
@@ -45,12 +45,12 @@ RpcChannel::RpcChannel(const TcpConnectionPtr& conn)
     conn_(conn),
     services_(NULL)
 {
-  LOG_INFO << "RpcChannel::ctor - " << this;
+  LOG_INFO << "--RpcChannel::ctor - " << this;
 }
 
 RpcChannel::~RpcChannel()
 {
-  LOG_INFO << "RpcChannel::dtor - " << this;
+  LOG_INFO << "--RpcChannel::dtor - " << this;
 }
 
   // Call the given method of the remote service.  The signature of this
@@ -64,6 +64,7 @@ void RpcChannel::CallMethod(const ::google::protobuf::MethodDescriptor* method,
                             const ClientDoneCallback& done)
 {
   // FIXME: can we move serialization to IO thread?
+  LOG_INFO << "--CallMethod";
   RpcMessage message;
   message.set_type(REQUEST);
   int64_t id = id_.incrementAndGet();
@@ -89,6 +90,7 @@ void RpcChannel::onMessage(const TcpConnectionPtr& conn,
                            Buffer* buf,
                            Timestamp receiveTime)
 {
+  LOG_INFO << "--onMessage";
   LOG_TRACE << "RpcChannel::onMessage " << buf->readableBytes();
   codec_.onMessage(conn, buf, receiveTime);
 }
@@ -97,6 +99,7 @@ void RpcChannel::onRpcMessage(const TcpConnectionPtr& conn,
                               const RpcMessagePtr& messagePtr,
                               Timestamp receiveTime)
 {
+  LOG_INFO << "--onRpcMessage";
   assert(conn == conn_);
   //printf("%s\n", message.DebugString().c_str());
   RpcMessage& message = *messagePtr;
@@ -162,6 +165,7 @@ void RpcChannel::onRpcMessage(const TcpConnectionPtr& conn,
 
 void RpcChannel::callServiceMethod(const RpcMessage& message)
 {
+  LOG_INFO << "--callServiceMethod";
   if (services_)
   {
     ServiceMap::const_iterator it = services_->find(message.service());
@@ -203,6 +207,7 @@ void RpcChannel::doneCallback(const ::google::protobuf::Message* responsePrototy
                               int64_t id)
 {
   // FIXME: can we move serialization to IO thread?
+  LOG_INFO << "--doneCallback";
   assert(response->GetDescriptor() == responsePrototype->GetDescriptor());
   RpcMessage message;
   message.set_type(RESPONSE);

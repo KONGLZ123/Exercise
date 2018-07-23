@@ -33,7 +33,7 @@ class SorterImpl : public Sorter
   			 const QueryResponse* responsePrototype,
 			 const RpcDoneCallback& done) override
   {
-  	LOG_INFO << "Query";
+  	LOG_INFO << "--Query";
   	
 	QueryResponse resp;
 	resp.set_count(data_.size());
@@ -56,7 +56,7 @@ class SorterImpl : public Sorter
 			  const RpcDoneCallback& done) override
   {
     int64_t guess = request->guess();
-	LOG_INFO << "Search " << guess;
+	LOG_INFO << "--Search " << guess;
 
 	SearchResponse resp;
     std::vector<int64_t>::iterator it = std::lower_bound(data_.begin(), data_.end(), guess);
@@ -78,7 +78,7 @@ class SorterImpl : public Sorter
       if (range > 1)
 		value += nrand48(xsubi_) % range;
       data_.push_back(value);
-      LOG_INFO << value;
+      //LOG_INFO << value;
       std::sort(data_.begin(), data_.end());
       if (debug) {
         std::copy(data_.begin(), data_.end(), std::ostream_iterator<int64_t>(std::cout, " "));
